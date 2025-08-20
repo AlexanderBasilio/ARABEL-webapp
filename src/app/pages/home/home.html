@@ -1,0 +1,29 @@
+<article class="home-container">
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" (click)="previousSlide()">‹</button>
+      
+      <div class="carousel-content">
+        <img [src]="currentMaterial.image" [alt]="currentMaterial.name" class="material-image">
+        
+        <div class="material-info">
+          <h2>{{currentMaterial.name}}</h2>
+          <div class="material-type" [ngClass]="{'eco': currentMaterial.isEco, 'synthetic': !currentMaterial.isEco}">
+            {{currentMaterial.type}}
+          </div>
+          <p class="material-description">{{currentMaterial.description}}</p>
+        </div>
+      </div>
+      
+      <button class="carousel-btn next" (click)="nextSlide()">›</button>
+    </div>
+    
+    <div class="carousel-indicators">
+      <span *ngFor="let material of materials; let i = index" 
+            class="indicator" 
+            [class.active]="i === currentIndex"
+            (click)="goToSlide(i)">
+      </span>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,25 @@
+.brand-banner {
+  background: #6c5ce7;
+  padding: 2px 0;
+  text-align: center;
+}
+
+.brand-text {
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.app-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.app-title h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
